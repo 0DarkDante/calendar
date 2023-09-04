@@ -1,0 +1,82 @@
+/* Общие стили для календаря */
+.calendar {
+  width: 300px; /* Измените ширину календаря по вашему усмотрению */
+  margin: 0 auto; /* Центрирование календаря по горизонтали */
+  text-align: center; /* Центрирование текста внутри календаря */
+  background-color: #f0f0f0; /* Цвет фона календаря */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень для календаря */
+  padding: 20px; /* Внутренний отступ */
+}
+
+/* Стили для месяца */
+.month-year {
+  display: flex; /* Встановлюємо елементи в рядок */
+  justify-content: center; /* Вирівнюємо їх по краях рядка */
+  align-items: center; /* Вирівнюємо їх по вертикалі по центру рядка */
+  padding-bottom: 10px;
+}
+
+.month {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding-right: 10px;
+}
+
+.year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Стили для списка дней */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* По 7 столбцов в строке */
+  gap: 5px; /* Расстояние между элементами */
+  justify-items: center; /* Выравнивание элементов внутри ячейки сетки по центру */
+}
+
+li {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  margin: 5px; /* Расстояние между элементами списка */
+  background-color: #fff; /* Цвет фона элемента */
+  border-radius: 50%; /* Скругление углов элемента */
+  font-weight: bold;
+  color: #333; /* Цвет текста элемента */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+li:hover {
+  background-color: #ccc; /* Цвет фона при наведении курсора */
+  color: #fff; /* Цвет текста при наведении курсора */
+  cursor: pointer; /* Изменение курсора при наведении на элемент */
+}
+
+.active {
+  background-color: rgb(106, 105, 156);
+}
+
+/* Стилі для посилань-стрілок "Попередній місяць" і "Наступний місяць" */
+.prev-month,
+.next-month {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 24px; /* Збільшимо розмір шрифту для стрілок */
+}
+
+.prev-month:hover,
+.next-month:hover {
+  color: #555;
+}
